@@ -106,7 +106,6 @@ Uygulama, `templates/index.html` ile basit bir etkileşim sunabilir (dosyadaki a
 - Git push HTTP 408 / büyük dosya hataları: `.gitignore`’ın büyük dosyaları engellediğinden emin olun. Gerekirse geçmişi temizleyin (bkz. “Hızlı Başlangıç” 5. adım).
 - CUDA yoksa eğitim CPU’da çalışır; eğitim süresi uzayabilir.
 
-## Lisans
-Bu depo kişisel/deneysel amaçlar içindir. Aksi belirtilmedikçe telif hakları saklıdır. Kurumsal/üretim kullanımı veya yeniden dağıtım planlıyorsanız lütfen lisans gereksinimlerini netleştirin.
-
+# Lisans
+Bu proje [Apache License 2.0](LICENSE) ile lisanslanmıştır. Kodu kullanırken ve dağıtırken lisans koşullarını (attribution, değişiklik bildirimi, patent klozu vb.) yerine getirdiğinizden emin olun.
 
