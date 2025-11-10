@@ -1,0 +1,26 @@
+# Project-specific ignores
+absa_model/
+*.csv
+
+# Model and large artifacts
+*.safetensors
+*.bin
+*.pt
+*.ckpt
+*.onnx
+*.tflite
+*.h5
+
+# Training and cache directories
+logs/
+checkpoints/
+__pycache__/
+.pytest_cache/
+.cache/
+
+# Environment and OS files
+.env
+.DS_Store
+Thumbs.db
+
+
