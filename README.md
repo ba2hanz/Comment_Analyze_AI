@@ -32,18 +32,6 @@ pip install -r requirements.txt
 YOUTUBE_API_KEY=YOUR_API_KEY
 ```
 
-5) Büyük dosyaların Git’e yüklenmesini engelleyin (zaten eklendi):
-
-```text
-.gitignore → absa_model/, *.csv, *.safetensors, *.pt, .env, logs/ …
-```
-
-Eğer yanlışlıkla büyük dosyaları commit ettiyseniz geçmişi temizlemek için şu komut yardımcı olur:
-
-```bash
-git filter-repo --path absa_model --path-glob '*.csv' --invert-paths
-git push --force-with-lease origin main
-```
 
 ## Proje Yapısı
 
