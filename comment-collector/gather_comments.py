@@ -65,7 +65,7 @@ def get_video_comments_real(video_id):
 
     return pd.DataFrame(all_comments)
 
-#Yorumları toplamak için video ID'leri giriniz
+#Yorumları toplamak için video ID'leri giriyoruz
 target_video_ids = [
     "",
     "",
@@ -90,4 +90,3 @@ final_df.to_csv(output_file, index=False, encoding="utf-8-sig")
 
 print(f"\n--- VERİ TOPLAMA ÖZETİ ---")
 print(f"Toplam {len(final_df)} yorum toplandı ve '{output_file}' dosyasına kaydedildi.")
-print("\nBetiği kendi yerel ortamınızda çalıştırırken, API anahtarınızı girmeyi ve 'google-api-python-client' kütüphanesini kurmayı unutmayın.")

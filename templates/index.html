@@ -17,24 +17,24 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 min-h-screen p-4 sm:p-8 font-sans">
+<body class="bg-gray-900 min-h-screen p-4 sm:p-8 font-sans">
     
     <!-- Header -->
-    <header class="mb-10 flex flex-col sm:flex-row justify-between items-start sm:items-center border-b pb-4">
-        <h1 class="text-3xl font-extrabold text-gray-900 flex items-center">
-            <span class="text-indigo-600 mr-3">⚡</span>ABSA Yorum Analiz Sistemi
+    <header class="mb-10 flex flex-col sm:flex-row justify-between items-start sm:items-center border-b border-gray-700 pb-4">
+        <h1 class="text-3xl font-extrabold text-white flex items-center">
+            <span class="text-indigo-400 mr-3">⚡</span>ABSA Yorum Analiz Sistemi
         </h1>
-        <div class="mt-4 sm:mt-0 text-sm text-gray-500 flex items-center p-2 bg-white rounded-lg shadow-sm">
+        <div class="mt-4 sm:mt-0 text-sm text-gray-400 flex items-center p-2 bg-gray-800 rounded-lg shadow-sm border border-gray-700">
             <span class="text-xs mr-2">👤</span>
-            <span class="font-semibold text-gray-700">Yorum Analizi Platformu</span>
+            <span class="font-semibold text-gray-300">Yorum Analizi Platformu</span>
         </div>
     </header>
 
     <!-- Ana Container -->
     <div class="max-w-6xl mx-auto">
         <!-- URL Giriş Formu -->
-        <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-200 mb-8">
-            <h2 class="text-xl font-semibold text-gray-800 mb-4">YouTube Video Analizi</h2>
+        <div class="bg-gray-800 p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-700 mb-8">
+            <h2 class="text-xl font-semibold text-white mb-4">YouTube Video Analizi</h2>
             
             <form id="analysisForm">
                 <div class="mb-4">
@@ -44,41 +44,41 @@
                             type="url"
                             id="videoUrl"
                             placeholder="https://www.youtube.com/watch?v=..."
-                            class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-xl focus:ring-indigo-500 focus:border-indigo-500"
+                            class="w-full pl-10 pr-4 py-3 bg-gray-700 border border-gray-600 text-white placeholder-gray-400 rounded-xl focus:ring-indigo-500 focus:border-indigo-500"
                             required
                         />
                     </div>
                 </div>
                 
                 <!-- Ek Bilgiler (İsteğe Bağlı) -->
-                <div class="mb-4 bg-gray-50 p-4 rounded-lg">
-                    <p class="text-sm text-gray-600 mb-3">💡 Ek Bilgiler (Daha iyi analiz için girebilirsiniz)</p>
+                <div class="mb-4 bg-gray-700/50 p-4 rounded-lg border border-gray-600">
+                    <p class="text-sm text-gray-300 mb-3">💡 Ek Bilgiler (Daha iyi analiz için girebilirsiniz)</p>
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
                         <div>
-                            <label class="block text-xs font-semibold text-gray-700 mb-1">Kanal Sahibi</label>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Kanal Sahibi</label>
                             <input
                                 type="text"
                                 id="channelOwner"
                                 placeholder="Örn: Caner Kara"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-indigo-500 focus:border-indigo-500"
+                                class="w-full px-3 py-2 bg-gray-700 border border-gray-600 text-white placeholder-gray-400 rounded-lg text-sm focus:ring-indigo-500 focus:border-indigo-500"
                             />
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-gray-700 mb-1">Konuk İsimleri</label>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Konuk İsimleri</label>
                             <input
                                 type="text"
                                 id="guestNames"
                                 placeholder="Örn: Ahmet, Mehmet"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-indigo-500 focus:border-indigo-500"
+                                class="w-full px-3 py-2 bg-gray-700 border border-gray-600 text-white placeholder-gray-400 rounded-lg text-sm focus:ring-indigo-500 focus:border-indigo-500"
                             />
                         </div>
                         <div>
-                            <label class="block text-xs font-semibold text-gray-700 mb-1">Bahsedilen Kişi</label>
+                            <label class="block text-xs font-semibold text-gray-300 mb-1">Bahsedilen Kişi</label>
                             <input
                                 type="text"
                                 id="mentionedPerson"
                                 placeholder="Örn: Berat Kara"
-                                class="w-full px-3 py-2 border border-gray-300 rounded-lg text-sm focus:ring-indigo-500 focus:border-indigo-500"
+                                class="w-full px-3 py-2 bg-gray-700 border border-gray-600 text-white placeholder-gray-400 rounded-lg text-sm focus:ring-indigo-500 focus:border-indigo-500"
                             />
                         </div>
                     </div>
@@ -87,35 +87,35 @@
                 <button
                     type="submit"
                     id="analyzeBtn"
-                    class="w-full sm:w-auto px-6 py-3 font-bold rounded-xl shadow-md bg-indigo-600 hover:bg-indigo-700 text-white transition"
+                    class="w-full sm:w-auto px-6 py-3 font-bold rounded-xl shadow-md bg-indigo-600 hover:bg-indigo-500 text-white transition"
                 >
                     <span id="btnText">⚡ Analiz Et</span>
                 </button>
             </form>
 
-            <div id="errorMessage" class="mt-4 hidden text-red-500 font-medium bg-red-50 p-3 rounded-lg border border-red-200"></div>
+            <div id="errorMessage" class="mt-4 hidden text-red-400 font-medium bg-red-900/30 p-3 rounded-lg border border-red-800"></div>
         </div>
 
         <!-- Sonuçlar Alanı -->
         <div id="resultsArea" class="hidden">
-            <h2 class="text-2xl font-bold text-gray-800 mb-4">📊 ABSA Analiz Sonuçları</h2>
-            <p class="text-gray-600 mb-6 italic">Model, her bir varlık kategorisi için ayrı ayrı duygu tahmini yaptı.</p>
+            <h2 class="text-2xl font-bold text-white mb-4">📊 ABSA Analiz Sonuçları</h2>
+            <p class="text-gray-400 mb-6 italic">Model, her bir varlık kategorisi için ayrı ayrı duygu tahmini yaptı.</p>
             
             <div id="resultsGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="mt-10 pt-4 text-center text-gray-400 text-xs border-t">
+    <footer class="mt-10 pt-4 text-center text-gray-500 text-xs border-t border-gray-700">
         ABSA (Varlık Tabanlı Duygu Analizi) Projesi
     </footer>
 
     <!-- Modal for Comments -->
-    <div id="commentModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-        <div class="bg-white rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col">
-            <div class="p-6 border-b border-gray-200 flex justify-between items-center">
-                <h3 id="modalTitle" class="text-2xl font-bold text-gray-800"></h3>
-                <button id="closeModal" class="text-gray-400 hover:text-gray-600 text-3xl">&times;</button>
+    <div id="commentModal" class="hidden fixed inset-0 bg-black bg-opacity-70 z-50 flex items-center justify-center p-4">
+        <div class="bg-gray-800 rounded-xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden flex flex-col border border-gray-700">
+            <div class="p-6 border-b border-gray-700 flex justify-between items-center">
+                <h3 id="modalTitle" class="text-2xl font-bold text-white"></h3>
+                <button id="closeModal" class="text-gray-400 hover:text-gray-200 text-3xl">&times;</button>
             </div>
             <div id="modalContent" class="overflow-y-auto flex-1 p-6 space-y-4">
                 <!-- Comments will be loaded here -->
@@ -126,11 +126,13 @@
     <script>
         // Aspect ve Polarity Tanımlamaları
         const ASPECT_COLORS = {
-            'KANAL_SAHİBİ_İMAJI': 'bg-red-500/10 text-red-700 border-red-500',
-            'BAHSEDİLEN_KİŞİ_İMAJI': 'bg-indigo-500/10 text-indigo-700 border-indigo-500',
-            'VİDEO_İÇERİK': 'bg-green-500/10 text-green-700 border-green-500',
-            'ÜRETİM_KALİTESİ': 'bg-yellow-500/10 text-yellow-700 border-yellow-500',
-            'KANAL_YÖNETİMİ': 'bg-purple-500/10 text-purple-700 border-purple-500',
+            'KANAL_SAHİBİ_İMAJI': 'bg-red-500/20 text-red-300 border-red-500',
+            'BAHSEDİLEN_KİŞİ_İMAJI': 'bg-indigo-500/20 text-indigo-300 border-indigo-500',
+            'VİDEO_İÇERİK': 'bg-green-500/20 text-green-300 border-green-500',
+            'ÜRETİM_KALİTESİ': 'bg-yellow-500/20 text-yellow-300 border-yellow-500',
+            'KANAL_YÖNETİMİ': 'bg-purple-500/20 text-purple-300 border-purple-500',
+            'ALAKASIZ': 'bg-gray-500/20 text-gray-300 border-gray-500',
+            'KONUK_İMAJI': 'bg-cyan-500/20 text-cyan-300 border-cyan-500',
         };
 
         const POLARITY_ICONS = {
@@ -176,12 +178,11 @@
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ 
-                        post_url: url,
-                        context_info: {
-                            channel_owner: channelOwner,
-                            guest_names: guestNames,
-                            mentioned_person: mentionedPerson
-                        }
+                        video_url: url,
+                        channel_owner: channelOwner || "",
+                        guest: guestNames || "",
+                        mentioned_person: mentionedPerson || "",
+                        max_comments: 1000
                     })
                 });
 
@@ -214,11 +215,11 @@
                 // Konuk ve kanal sahibi analizi için özel renk atama
                 let colorClass;
                 if (aspect.startsWith('KONUK_İMAJI_')) {
-                    colorClass = 'bg-cyan-500/10 text-cyan-700 border-cyan-500';
+                    colorClass = 'bg-cyan-500/20 text-cyan-300 border-cyan-500';
                 } else if (aspect.startsWith('KANAL_SAHİBİ_İMAJI_')) {
-                    colorClass = 'bg-red-500/10 text-red-700 border-red-500';
+                    colorClass = 'bg-red-500/20 text-red-300 border-red-500';
                 } else {
-                    colorClass = ASPECT_COLORS[aspect] || 'bg-gray-100 text-gray-800 border-gray-300';
+                    colorClass = ASPECT_COLORS[aspect] || 'bg-gray-700 text-gray-200 border-gray-600';
                 }
                 const polarity = data.predicted_polarity;
                 const confidence = (data.confidence * 100).toFixed(1);
@@ -230,7 +231,7 @@
                     .sort(([, a], [, b]) => b - a);
 
                 // Aspect için isim ekleme
-                let aspectTitle = aspect.replace('_', ' ').replace('İMAJI', ' İmajı');
+                let aspectTitle = aspect.replace(/_/g, ' ').replace('İMAJI', ' İmajı');
                 const channelOwner = document.getElementById('channelOwner').value;
                 const guestNames = document.getElementById('guestNames').value;
                 const mentionedPerson = document.getElementById('mentionedPerson').value;
@@ -239,13 +240,20 @@
                 if (aspect.startsWith('KONUK_İMAJI_')) {
                     const guestName = aspect.replace('KONUK_İMAJI_', '');
                     aspectTitle = `👤 ${guestName} - Konuk Analizi`;
+                } else if (aspect === 'KONUK_İMAJI') {
+                    aspectTitle = `👤 Konuk İmajı`;
                 } else if (aspect.startsWith('KANAL_SAHİBİ_İMAJI_')) {
                     const ownerNames = aspect.replace('KANAL_SAHİBİ_İMAJI_', '');
                     aspectTitle = `📺 ${ownerNames} - Kanal Sahibi Analizi`;
+                } else if (aspect.startsWith('BAHSEDİLEN_KİŞİ_İMAJI_')) {
+                    const personName = aspect.replace('BAHSEDİLEN_KİŞİ_İMAJI_', '');
+                    aspectTitle = `👤 ${personName} - Bahsedilen Kişi Analizi`;
                 } else if (aspect === 'BAHSEDİLEN_KİŞİ_İMAJI' && mentionedPerson) {
                     aspectTitle = `👤 ${aspectTitle} (${mentionedPerson})`;
                 } else if (aspect === 'BAHSEDİLEN_KİŞİ_İMAJI') {
                     aspectTitle = `👤 ${aspectTitle}`;
+                } else if (aspect === 'ALAKASIZ') {
+                    aspectTitle = `🚫 Alakasız Yorumlar`;
                 }
 
                 const card = document.createElement('div');
@@ -266,13 +274,13 @@
                             ${polarity} (Güven: ${confidence}%)
                         </span>
                     </div>
-                    <div class="text-xs text-gray-600">
-                        <p class="font-semibold mb-1">Olasılık Dağılımı:</p>
+                    <div class="text-xs text-gray-400">
+                        <p class="font-semibold mb-1 text-gray-300">Olasılık Dağılımı:</p>
                         ${sortedProbs.map(([pol, prob]) => `
                             <div class="flex justify-between items-center mb-1">
-                                <span class="w-1/4 ${POLARITY_COLORS[pol] || 'text-gray-500'}">${pol}:</span>
-                                <span class="font-mono w-1/4 text-right">${(prob * 100).toFixed(1)}%</span>
-                                <div class="w-1/2 ml-2 h-2 bg-gray-200 rounded-full">
+                                <span class="w-1/4 ${POLARITY_COLORS[pol] || 'text-gray-400'}">${pol}:</span>
+                                <span class="font-mono w-1/4 text-right text-gray-300">${(prob * 100).toFixed(1)}%</span>
+                                <div class="w-1/2 ml-2 h-2 bg-gray-700 rounded-full">
                                     <div class="h-full rounded-full ${pol === 'POZİTİF' ? 'bg-green-500' : pol === 'NEGATİF' ? 'bg-red-500' : 'bg-gray-500'}" 
                                          style="width: ${prob * 100}%"></div>
                                 </div>
@@ -280,8 +288,8 @@
                         `).join('')}
                     </div>
                     ${data.comments && data.comments.length > 0 ? `
-                    <div class="mt-3 pt-3 border-t border-gray-200">
-                        <p class="text-xs text-indigo-600 font-medium">📝 ${data.comments.length} yorumu görüntülemek için tıklayın</p>
+                    <div class="mt-3 pt-3 border-t border-gray-600">
+                        <p class="text-xs text-indigo-400 font-medium">📝 ${data.comments.length} yorumu görüntülemek için tıklayın</p>
                     </div>
                     ` : ''}
                 `;
@@ -321,27 +329,22 @@
                             </h4>
                             <div class="space-y-3">
                                 ${grouped[polarity].slice(0, 20).map(comment => `
-                                    <div class="p-4 border border-gray-200 rounded-lg hover:border-indigo-400 transition">
-                                        <p class="text-gray-700 mb-2">${comment.comment}</p>
+                                    <div class="p-4 bg-gray-700 border border-gray-600 rounded-lg hover:border-indigo-400 transition">
+                                        <p class="text-gray-200 mb-2">${comment.text || comment.comment || 'Yorum bulunamadı'}</p>
                                         <div class="flex justify-between items-center text-xs">
-                                            <span class="${colorClass} font-semibold">Güven: ${(comment.confidence * 100).toFixed(1)}%</span>
-                                            <div class="flex gap-2">
-                                                ${Object.entries(comment.all_probabilities).map(([pol, prob]) => `
-                                                    <span class="text-gray-500">${pol}: ${(prob * 100).toFixed(0)}%</span>
-                                                `).join('')}
-                                            </div>
+                                            <span class="${colorClass} font-semibold">Güven: ${((comment.confidence || 0) * 100).toFixed(1)}%</span>
                                         </div>
                                     </div>
                                 `).join('')}
                             </div>
-                            ${grouped[polarity].length > 20 ? `<p class="text-sm text-gray-500 mt-2">Ve ${grouped[polarity].length - 20} yorum daha...</p>` : ''}
+                            ${grouped[polarity].length > 20 ? `<p class="text-sm text-gray-400 mt-2">Ve ${grouped[polarity].length - 20} yorum daha...</p>` : ''}
                         </div>
                     `;
                 }
             });
 
             if (!html) {
-                html = '<p class="text-gray-500 text-center py-8">Bu kategori için henüz yorum bulunamadı.</p>';
+                html = '<p class="text-gray-400 text-center py-8">Bu kategori için henüz yorum bulunamadı.</p>';
             }
 
             modalContent.innerHTML = html;
@@ -362,4 +365,3 @@
     </script>
 </body>
 </html>
-

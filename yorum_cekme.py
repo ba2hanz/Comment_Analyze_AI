@@ -50,7 +50,7 @@ def get_youtube_comments(post_url: str, max_comments: int = 100) -> list[str]:
         youtube = build(YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=YOUTUBE_API_KEY)
         comments = []
         page_count = 0
-        max_pages = 5  # Maksimum 3 sayfa
+        max_pages = 5  # Maksimum 5 sayfa
         next_page_token = None
 
         while page_count < max_pages and len(comments) < max_comments:
